@@ -48,7 +48,7 @@ def ingresar_tarea(nombre_usuario, nombre_tarea, descripcion_tarea, fecha):
         print("ese usuario no existe")
 
 def eliminar_tarea(id_tarea):
-    cursor.execute(f"DELETE FROM tareas WHERE id = {id_tarea}")
+    cursor.execute(f"DELETE FROM tareas WHERE id_tareas = {id_tarea}")
     connection.commit()
 
 
