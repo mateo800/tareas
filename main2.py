@@ -8,17 +8,10 @@ from PySide6.QtWidgets import (
     QPushButton,   # botón
     QLineEdit,     # campo de texto (una línea)
     QTextEdit,     # campo de texto multilínea
-    QCheckBox,     # casilla de verificación
-    QRadioButton,  # opción única dentro de un grupo
-    QComboBox,     # lista desplegable
-    QSlider,       # control deslizante (números)
-    QSpinBox,      # control numérico con flechas
-    QProgressBar,  # barra de progreso
     QVBoxLayout,   # layout vertical
     QHBoxLayout,   # layout horizontal
     QTableWidget,  # tabla
     QTableWidgetItem,  # ítem de tabla
-    QGridLayout,    # layout en forma de tabla
     QStackedWidget
 )
 from PySide6.QtCore import Qt
@@ -78,7 +71,6 @@ pantalla_inicio.setStyleSheet(estilo_ventanas)
 pantalla_inicio.setWindowTitle("PANTALLA INICIO")
 pantalla_inicio.move(50, 50)
 
-nombre = "fulanito"
 layPI = QVBoxLayout()
 
 Li1 = QLabel("BIENVENIDO")
@@ -112,7 +104,6 @@ def ir_a_seleccion():
     stack.setFixedSize(550,300)
     
 
-
 def ingresar():
     global nombre
     nombre = txt_nombre.text().strip()
@@ -134,6 +125,7 @@ def ingresar():
         else:
             ir_a_seleccion()
             print("nombre existente:", nombre)
+
 print("nombre:", nombre)
 
 btn_ingresar.clicked.connect(ingresar)
